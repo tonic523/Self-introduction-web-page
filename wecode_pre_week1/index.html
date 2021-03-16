@@ -12,13 +12,25 @@
     <header class="nav">
         <div class="nav__column"><a href="#profile">Profile</a></div>
         <div class="nav__column"><a href="#likes">Likes</a></div> 
-        <div class="nav__column"><a href="#contact">Contact</a></div>             
+        <div class="nav__column"><a href="#contact">Contact</a></div>
+        <div class="nav__column">
+            <input type="button" value="dark" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            var a  = document.querySelectorAll('a');
+            for (var i = 0; i < a.length; i++){
+                a[i].style.color = 'white';
+            }">
+            <input type="button" value="light" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';">
+        </div>             
     </header>
     
     <main>
         <p class="title">Profile</p>
         <section class="profile" id="profile">
-            <img class="profile__photo" src="img/photo.jpg" alt="">
+            <img class="profile__photo" src="img/Photo.jpg" alt="">
             <div class="profile__info">
                 <p class="name">이름: 최우석</p>
                 <p class="age">나이: 26</p>
