@@ -10,12 +10,10 @@ html {
 }
 body {
   padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 a {
   text-decoration: none;
-  color: blueviolet;
 }
 .nav {
   position: fixed;
@@ -26,12 +24,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
-  opacity: 40%;
+  background-color: gray;
 }
 
-.nav__column {
+.nav__column a {
   font-size: 20px;
+  color:white;
 }
 main {
   padding: 0 10%;
@@ -113,6 +111,7 @@ main {
 
 .contact__item {
   margin: 100px;
+  color: black;
 }
 
 .contact__item:last-child {
