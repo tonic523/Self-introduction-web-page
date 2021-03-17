@@ -25,6 +25,7 @@ a {
   align-items: center;
   justify-content: space-around;
   background-color: gray;
+  z-index: 1;
 }
 
 .nav__column a {
@@ -47,7 +48,8 @@ main {
 
 .profile,
 .likes,
-.contact {
+.contact,
+.games {
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -86,14 +88,15 @@ main {
 .likes__photo p {
   position: absolute;
   top: 50%;
+  width: 90%;
   opacity: 0;
 }
 .hiking,
 .pingpong,
 .travel,
 .game {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   border-radius: 50%;
 }
 
@@ -104,6 +107,14 @@ main {
 .likes__photo:hover p {
   opacity: 100%;
 }
+
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 .contact {
   height: 100px;
