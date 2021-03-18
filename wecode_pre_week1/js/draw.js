@@ -7,7 +7,7 @@ function drawBall(color) {
 }
 function drawPaddle() {
     ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleWidth);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
@@ -16,24 +16,28 @@ function drawPaddle() {
 function drawBricks() {
     for(var c=0; c<brickColumnCount; c++) {
         for(var r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
+            if(bricks[c][r].status >= 1) {
                 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
                 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
                 bricks[c][r].x = brickX;
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
+                if(bricks[c][r].status == 2) {
+                    ctx.fillStyle = "black";
+                }else{
+                    ctx.fillStyle = "gray";
+                }               
                 ctx.fill();
                 ctx.closePath();
             }
         }
     }
 }
-function drawScore() {
+function drawLeftoverBricks() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText("Score: "+score, 8, 20);    
+    ctx.fillText("남은 갯수: "+totalBricks, 8, 20);    
 }
 
 function drawLives() {
@@ -42,12 +46,18 @@ function drawLives() {
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);   
 }
 
+function drawBackground() {
+    ctx.fillStyle = '#CA9B89';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // 지울 부분(from x, from y,to x, to y)
+    drawBackground() 
     drawBricks();
     drawBall(color);
     drawPaddle();
-    drawScore();
+    drawLeftoverBricks();
     drawLives();
     collisionDetection();
 
@@ -59,6 +69,28 @@ function draw() {
         dy = -dy;
     } else if(y + dy > canvas.height-ballRadius-paddleHeight+5) {
         if(x > paddleX && x < paddleX + paddleWidth) {
+            if(x < paddleX + 20){
+                if (dx  > 0) {
+                    dx = -dx;
+                }
+                dx = -4;
+            }else if(x < paddleX + 40){
+                if (dx  > 0) {
+                    dx = -dx;
+                }
+                dx = -2;
+            }
+            else if(x < paddleX + 60){
+                if (dx  < 0) {
+                    dx = -dx;
+                }
+                dx = 2;
+            }else{
+                if (dx  < 0) {
+                    dx = -dx;
+                }
+                dx = 4;
+            }   
             dy = -dy;
         }
         else {
