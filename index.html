@@ -11,10 +11,14 @@
 <body cz-shortcut-listen="true">
     <header class="nav">
         <div class="nav__column"><a href="#profile">Profile</a></div>
-        <div class="nav__column"><a href="#likes">Likes</a></div> 
-        <div class="nav__column"><a href="#contact">Contact</a></div>
-        <div class="nav__column"><a href="#game">Game</a></div>
+        <div class="nav__column"><a href="#favorite">Favorite</a></div> 
+        <div class="nav__column"><a href="#project">Project</a></div>
         <div class="nav__column">
+            <a href="mailto:diddmlvkf@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+            <a href="https://github.com/tonic523"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://velog.io/@tonic523">velog</a>
+        </div>
+        <!-- <div class="nav__column">
             <input type="button" value="dark" onclick="
             document.querySelector('body').style.backgroundColor='black';
             document.querySelector('body').style.color='white';
@@ -29,50 +33,129 @@
             for (var i = 0; i < a.length; i++){
                 a[i].style.color = 'black';
             }"">
-        </div>             
+        </div>              -->
     </header>
-    
-    <main>
-        <p class="title">Profile</p>
-        <section class="profile" id="profile">
-            <img class="profile__photo" src="img/photo.jpg" alt="">
-            <div class="profile__info">
-                <p class="name">이름: 최우석</p>
-                <p class="age">나이: 26</p>
-                <p class="mbti">MBTI: ISFJ</p>
-                <p class="goal">같이 일하고 싶은 웹 백엔드 개발자가 되고 싶어요!!</p>
+    <section class="intro">
+        <div class="container">
+            <div class="row row-title">
+                <div class="col">
+                    <h1 class="title">안녕하세요 위코드 20기 최우석입니다.</h1>
+                </div>
             </div>
-            <div></div>
-        </section>
-        <p class="title">Likes</p>
-        <section class="likes" id="likes">
-            <div class="likes__photo">
-                <img class="hiking" src="img/hiking.jpg" alt="">
-                <p>친구들이랑 등산하는 걸 좋아해요^^</p>
+        </div>
+    </section>   
+    <section class="profile" id="profile">
+        <div class="container">
+            <div class="row row-title">
+                <div class="col">
+                    <h2 class="title">Profile</h2>
+                </div>
             </div>
-            <div class="likes__photo">
-                <img class="pingpong" src="img/pingpong.jpg" alt="">
-                <p>탁구, 축구 등등 공을 가지고 하는 운동은 다 좋아합니다!</p>
+            <div class="row">
+                <div class="col">
+                    <img class="profile__photo" src="img/photo.jpg" alt="">
+                </div>
+                <div class="col">
+                    <div class="profile__info">
+                        <p class="name">이름: 최우석</p>
+                        <p class="age">나이: 26</p>
+                        <p class="mbti">MBTI: ISFJ</p>
+                        <p class="goal">같이 일하고 싶은 웹 백엔드 개발자가 되고 싶어요!!</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <section class="favorite" id="favorite">
+        <div class="container">
+            <div class="row row-title">
+                <div class="col">
+                    <h2 class="title">Favorite</h2>
+                </div> 
             </div>
-            <div class="likes__photo">
-                <img class="travel" src="img/travel.jpg" alt="">
-                <p>해외여행을 가고 싶어요 .. 코로나 끝나면 스위스에 갈거에요! ㅎㅎ</p>
+            <div class="row  exercise">
+                <div class="col">
+                    <h3>Exercise</h3>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="exercise" src="img/hiking.jpg" alt="">
+                        <p>친구들이랑 등산하는 걸 좋아해요^^</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="exercise" src="img/pingpong.jpg" alt="">
+                        <p>탁구, 축구 등등 공을 가지고 하는 운동은 다 좋아합니다!</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="exercise" src="img/soccer.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="likes__photo">
-                <img class="game" src="img/game.PNG" alt="">
-                <p>집에 있을 땐 컴퓨터게임을 즐겨 해요</p>
-            </div>   
-        </section>
-        <p class="title">Game</p>
-        <section class="games" id="game">
-            <div class="games__item"><a href="brick_break.html"><i class="fas fa-dice-d6 fa-2x"></i></a></div>
-        </section>
-        <p class="title">Contact</p>
-        <section class="contact" id="contact">
-            <a class="contact__item" href="mailto:diddmlvkf@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-            <a class="contact__item" href="https://github.com/tonic523"><i class="fab fa-github fa-2x"></i></a>
-            <a class="contact__item" href="https://velog.io/@tonic523">velog</a>
-        </section>
-    </main>
+            <div class="row travel">
+                <div class="col">
+                    <h3>Travel</h3>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="travel" src="img/kota.jpg" alt="">
+                        <p>해외여행을 가고 싶어요 .. 코로나 끝나면 스위스에 갈거에요! ㅎㅎ</p>
+                    </div>
+                </div> 
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="travel" src="img/gyeongju.jpg" alt="">
+                    </div>
+                </div>         
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="travel" src="img/mongolia.jpg" alt="">
+                    </div>
+                </div>         
+            </div>
+            <div class="row puppy">
+                <div class="col">
+                    <h3>Puppy</h3>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="puppy" src="img/puppy1.jpg" alt="">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="puppy" src="img/puppy2.jpg" alt="">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="favorite__photo">
+                        <img class="puppy" src="img/puppy3.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>     
+        </div>    
+    </section>
+    <section class="project" id="project">
+        <div class="container">
+            <div class="row row-title">
+                <div class="col">
+                    <h2 class="title">Project</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="games__item"><a href="brick_break.html"><i class="fas fa-dice-d6 fa-2x"></i></a></div>
+                </div>               
+            </div>
+            
+        </div>
+    </section>       
 </body>
 </html>
