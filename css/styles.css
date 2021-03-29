@@ -37,6 +37,15 @@ a {
 
 .nav__column a {
   font-size: 20px;
+  transition: font-size 0.2s linear;
+}
+
+.nav__column a:hover {
+  font-size: 22px;
+}
+
+.nav__column a:active {
+  font-size: 20px;
 }
 
 .intro,
