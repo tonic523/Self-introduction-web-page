@@ -75,10 +75,49 @@ a {
 .row-title {
   margin-bottom: 40px;
 }
-
+.intro__title,
 .title {
   margin-top: 50px;
   font-size: 40px;
+}
+
+.intro__title {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  overflow: hidden;
+  animation: typingAni 3s steps(40, end) 1;
+}
+.intro__title::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  top: 3px;
+  right: 0;
+  padding: 0px 1px;
+  border-right: 5px solid #4e3620;
+  animation: cursor 1s step-end infinite;
+}
+@keyframes typingAni {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 562px;
+  }
+}
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .profile__photo {
